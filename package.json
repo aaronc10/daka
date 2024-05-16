@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "three": "^0.164.1"
   },
@@ -8,6 +9,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview --port 5173"
   },

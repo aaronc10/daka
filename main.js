@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {RGBELoader} from 'three/examples/jsm/loaders/RGBELoader.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import gsap from 'gsap';
+import { DRACOLoader } from 'three/examples/jsm/Addons.js';
 
 
 // const canvas = document.querySelector('canvas.webgl')
@@ -142,6 +143,10 @@ export const handleCameraRotation = (camera, cameraOrientationState) => {
 
 
 const loader = new GLTFLoader();
+const dloader = new DRACOLoader();
+dloader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
+dloader.setDecoderConfig({type:'js'});
+loader.setDRACOLoader(dLoader);
 
 loader.load(
 	// resource URL
